@@ -48,4 +48,4 @@ names(sensordata_mean_std) <- make.names(names(sensordata_mean_std))
 #output to file
 
 tidy_data_set = ddply(sensordata_mean_std, c("Subject","Activity"), numcolwise(mean))
-write.table(tidy_data_set, file = "tidy_data_set.txt")
+write.table(tidy_data_set, file = "tidy_data_set.txt",row.names = FALSE)
